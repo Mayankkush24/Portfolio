@@ -130,23 +130,34 @@ function Achievements() {
 
                 {/* Featured Guinness World Record */}
                 <div className="featured-achievement" ref={el => cardsRef.current[0] = el}>
-                    <div className="glow-border"></div>
-                    <div className="featured-content">
-                        <div className="trophy-icon"><FaTrophy /></div>
-                        <div className="badge">Guinness World Record</div>
-                        <h3>Organized Google Agentic AI Day</h3>
-                        <p className="featured-description">
-                            Largest AI workshop with <span className="highlight">{formatNumber(counters.participants)}</span> participants
-                        </p>
-                        <div className="achievement-stats">
-                            <div className="stat-item">
-                                <div className="stat-number">{formatNumber(counters.participants)}</div>
-                                <div className="stat-label">Participants</div>
+                    <div className="achievement-container">
+                        <div 
+                            className="achievement-image"
+                            style={{
+                                backgroundImage: `url(${process.env.PUBLIC_URL}/guinness-record.jpg)`
+                            }}
+                        >
+                            <div className="image-overlay"></div>
+                        </div>
+                        <div className="achievement-details">
+                            <div className="achievement-header">
+                                <div className="trophy-icon"><FaTrophy /></div>
+                                <div className="badge">GUINNESS WORLD RECORD</div>
                             </div>
-                            <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <div className="stat-number">World Record</div>
-                                <div className="stat-label">Achievement</div>
+                            <h3>Organized Google Agentic AI Day</h3>
+                            <p className="featured-description">
+                                Largest AI workshop with <span className="highlight">{formatNumber(counters.participants)}</span> participants
+                            </p>
+                            <div className="achievement-stats">
+                                <div className="stat-item">
+                                    <div className="stat-number">{formatNumber(counters.participants)}</div>
+                                    <div className="stat-label">PARTICIPANTS</div>
+                                </div>
+                                <div className="stat-divider"></div>
+                                <div className="stat-item">
+                                    <div className="stat-number">World Record</div>
+                                    <div className="stat-label">ACHIEVEMENT</div>
+                                </div>
                             </div>
                         </div>
                     </div>
