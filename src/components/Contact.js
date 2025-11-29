@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { HiMail, HiPhone, HiLocationMarker, HiArrowUp } from 'react-icons/hi';
+import { FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import { IoMdSend, IoMdCheckmark, IoMdClose } from 'react-icons/io';
 import './Contact.css';
 
 function Contact() {
@@ -107,7 +110,7 @@ function Contact() {
 
                             <div className="contact-details">
                                 <a href="mailto:ermayankkush2482@gmail.com" className="contact-item">
-                                    <span className="contact-icon">📧</span>
+                                    <span className="contact-icon"><HiMail /></span>
                                     <div className="contact-text">
                                         <span className="contact-label">Email</span>
                                         <span className="contact-value">ermayankkush2482@gmail.com</span>
@@ -115,7 +118,7 @@ function Contact() {
                                 </a>
 
                                 <a href="tel:+918950261823" className="contact-item">
-                                    <span className="contact-icon">📱</span>
+                                    <span className="contact-icon"><HiPhone /></span>
                                     <div className="contact-text">
                                         <span className="contact-label">Phone</span>
                                         <span className="contact-value">+91 8950261823</span>
@@ -123,7 +126,7 @@ function Contact() {
                                 </a>
 
                                 <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" className="contact-item">
-                                    <span className="contact-icon">💼</span>
+                                    <span className="contact-icon"><FaLinkedin /></span>
                                     <div className="contact-text">
                                         <span className="contact-label">LinkedIn</span>
                                         <span className="contact-value">linkedin.com/in/mayank-kush</span>
@@ -131,7 +134,7 @@ function Contact() {
                                 </a>
 
                                 <div className="contact-item">
-                                    <span className="contact-icon">📍</span>
+                                    <span className="contact-icon"><HiLocationMarker /></span>
                                     <div className="contact-text">
                                         <span className="contact-label">Location</span>
                                         <span className="contact-value">Bahadurgarh, Haryana, India</span>
@@ -140,14 +143,14 @@ function Contact() {
                             </div>
 
                             <div className="social-links">
-                                <a href="mailto:ermayankkush2482@gmail.com" className="social-btn" title="Email">
-                                    📧
+                                <a href="mailto:ermayankkush2482@gmail.com" className="social-btn" title="Email" aria-label="Email">
+                                    <HiMail />
                                 </a>
-                                <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" className="social-btn" title="LinkedIn">
-                                    💼
+                                <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" className="social-btn" title="LinkedIn" aria-label="LinkedIn">
+                                    <FaLinkedin />
                                 </a>
-                                <a href="tel:+918950261823" className="social-btn" title="Phone">
-                                    📱
+                                <a href="tel:+918950261823" className="social-btn" title="Phone" aria-label="Phone">
+                                    <HiPhone />
                                 </a>
                             </div>
 
@@ -157,7 +160,7 @@ function Contact() {
                                 rel="noopener noreferrer" 
                                 className="btn btn-primary download-resume"
                             >
-                                Download Resume 📄
+                                <FaFileDownload /> Download Resume
                             </a>
                         </div>
 
@@ -214,17 +217,17 @@ function Contact() {
                                 </div>
 
                                 <button type="submit" className="btn btn-primary submit-btn">
-                                    Send Message ✉️
+                                    <IoMdSend /> Send Message
                                 </button>
 
                                 {submitStatus === 'success' && (
                                     <div className="submit-message success">
-                                        ✓ Message sent successfully! I'll get back to you soon.
+                                        <IoMdCheckmark /> Message sent successfully! I'll get back to you soon.
                                     </div>
                                 )}
                                 {submitStatus === 'error' && (
                                     <div className="submit-message error">
-                                        ✗ Please fix the errors above.
+                                        <IoMdClose /> Please fix the errors above.
                                     </div>
                                 )}
                             </form>
@@ -257,9 +260,9 @@ function Contact() {
                         <div className="footer-section">
                             <h4>Connect</h4>
                             <div className="footer-social">
-                                <a href="mailto:ermayankkush2482@gmail.com" title="Email">📧</a>
-                                <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
-                                <a href="tel:+918950261823" title="Phone">📱</a>
+                                <a href="mailto:ermayankkush2482@gmail.com" title="Email" aria-label="Email"><HiMail /></a>
+                                <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><FaLinkedin /></a>
+                                <a href="tel:+918950261823" title="Phone" aria-label="Phone"><HiPhone /></a>
                             </div>
                         </div>
                     </div>
@@ -276,7 +279,7 @@ function Contact() {
                 onClick={scrollToTop}
                 aria-label="Back to top"
             >
-                ↑
+                <HiArrowUp />
             </button>
         </>
     );

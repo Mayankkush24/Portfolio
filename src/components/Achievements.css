@@ -56,9 +56,16 @@
 }
 
 .trophy-icon {
-    font-size: 4.5rem;
     margin-bottom: var(--spacing-sm);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.trophy-icon svg {
+    font-size: 4.5rem;
 }
 
 .badge {
@@ -174,9 +181,16 @@
 }
 
 .achievement-icon {
-    font-size: 3rem;
     margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.achievement-icon svg {
+    font-size: 3rem;
 }
 
 .achievement-card h3 {
@@ -192,8 +206,19 @@
 .period,
 .score {
     font-size: var(--font-size-sm);
-    color: rgba(240, 242, 245, 0.8);
+    color: rgba(240, 242, 245, 0.85);
     margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.platform svg,
+.period svg {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    flex-shrink: 0;
 }
 
 .institution {

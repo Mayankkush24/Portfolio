@@ -64,10 +64,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
     border: 4px solid var(--dark-bg);
+}
+
+.profile-icon {
+    font-size: 5rem;
+    color: var(--text-primary);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .hero-text-content {
@@ -133,6 +138,12 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.location-icon {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
 }
 
 .contact-icons {
@@ -152,10 +163,15 @@
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 50%;
-    font-size: var(--font-size-xl);
     transition: all var(--transition-normal);
     cursor: pointer;
     text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.contact-icon svg {
+    font-size: 1.5rem;
+    transition: all var(--transition-normal);
 }
 
 .contact-icon:hover {
@@ -163,6 +179,11 @@
     border-color: var(--accent-blue);
     transform: translateY(-5px) scale(1.1);
     box-shadow: var(--shadow-glow);
+    color: var(--text-primary);
+}
+
+.contact-icon:hover svg {
+    transform: scale(1.1);
 }
 
 .hero-cta {
@@ -184,6 +205,9 @@
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    font-family: var(--font-primary);
 }
 
 .btn-primary {
@@ -195,17 +219,19 @@
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg), var(--shadow-glow);
+    color: var(--text-primary);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
-    border: 2px solid var(--glass-border);
+    border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary:hover {
-    background: var(--glass-bg);
+    background: rgba(49, 130, 206, 0.1);
     border-color: var(--accent-blue);
+    color: var(--text-primary);
 }
 
 .scroll-indicator {

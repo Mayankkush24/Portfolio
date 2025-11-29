@@ -177,7 +177,15 @@
 .period {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.location svg,
+.period svg {
+    font-size: 1rem;
+    color: var(--accent-blue);
+    flex-shrink: 0;
 }
 
 /* Timeline content */
@@ -227,6 +235,15 @@
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.expand-btn svg {
+    font-size: 1rem;
 }
 
 .expand-btn:hover {

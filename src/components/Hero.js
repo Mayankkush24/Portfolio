@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import { FaLinkedin, FaUserTie } from 'react-icons/fa';
 import './Hero.css';
 
 function Hero() {
@@ -166,7 +168,7 @@ function Hero() {
                     <div className="profile-image-container">
                         <div className="profile-image-border"></div>
                         <div className="profile-image-wrapper">
-                            👨‍💼
+                            <FaUserTie className="profile-icon" />
                         </div>
                     </div>
 
@@ -179,19 +181,19 @@ function Hero() {
                             <span className="typing-text">{typingText}</span>
                         </p>
                         <p className="hero-location">
-                            <span>📍</span>
+                            <HiLocationMarker className="location-icon" />
                             <span>Bahadurgarh, Haryana, India</span>
                         </p>
 
                         <div className="contact-icons">
-                            <a href="mailto:mayank.kush@email.com" className="contact-icon" title="Email">
-                                📧
+                            <a href="mailto:ermayankkush2482@gmail.com" className="contact-icon" title="Email" aria-label="Email">
+                                <HiMail />
                             </a>
-                            <a href="https://linkedin.com/in/mayankkush" target="_blank" rel="noopener noreferrer" className="contact-icon" title="LinkedIn">
-                                💼
+                            <a href="https://linkedin.com/in/mayank-kush" target="_blank" rel="noopener noreferrer" className="contact-icon" title="LinkedIn" aria-label="LinkedIn">
+                                <FaLinkedin />
                             </a>
-                            <a href="tel:+919876543210" className="contact-icon" title="Phone">
-                                📱
+                            <a href="tel:+918950261823" className="contact-icon" title="Phone" aria-label="Phone">
+                                <HiPhone />
                             </a>
                         </div>
 

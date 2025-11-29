@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { HiLocationMarker, HiCalendar } from 'react-icons/hi';
+import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 import './Experience.css';
 
 function Experience() {
@@ -93,8 +95,8 @@ function Experience() {
                                     <div className="position-info">
                                         <h4>{exp.position}</h4>
                                         <div className="meta-info">
-                                            <span className="location">📍 {exp.location}</span>
-                                            <span className="period">📅 {exp.period}</span>
+                                            <span className="location"><HiLocationMarker /> {exp.location}</span>
+                                            <span className="period"><HiCalendar /> {exp.period}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +114,7 @@ function Experience() {
                                     onClick={() => toggleExpand(index)}
                                     aria-label={expandedItems[index] ? 'Show less' : 'Show more'}
                                 >
-                                    {expandedItems[index] ? 'Show Less ▲' : 'Show More ▼'}
+                                    {expandedItems[index] ? <><IoChevronUp /> Show Less</> : <><IoChevronDown /> Show More</>}
                                 </button>
 
                                 <div className="tech-stack">

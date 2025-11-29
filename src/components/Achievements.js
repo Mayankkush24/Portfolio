@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { FaTrophy, FaGraduationCap, FaBriefcase, FaCertificate, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import './Achievements.css';
 
 function Achievements() {
@@ -96,14 +97,14 @@ function Achievements() {
 
     const achievements = [
         {
-            icon: '📜',
+            icon: <FaCertificate />,
             title: 'Google Data Analytics Professional Certificate',
             platform: 'Coursera',
             description: 'Comprehensive certification covering data cleaning, visualization, SQL, R, and Tableau',
             skills: ['Data Cleaning', 'Visualization', 'SQL', 'R', 'Tableau']
         },
         {
-            icon: '💼',
+            icon: <FaBriefcase />,
             title: 'Executive Impact',
             description: 'Delivered 10+ dashboards to PMO Office & government stakeholders',
             stats: [
@@ -112,7 +113,7 @@ function Achievements() {
             ]
         },
         {
-            icon: '🎓',
+            icon: <FaGraduationCap />,
             title: 'B.Tech in Computer Science & Engineering',
             institution: 'Vaish College of Engineering, Rohtak, Haryana',
             period: 'Oct 2020 – Jun 2024',
@@ -131,7 +132,7 @@ function Achievements() {
                 <div className="featured-achievement" ref={el => cardsRef.current[0] = el}>
                     <div className="glow-border"></div>
                     <div className="featured-content">
-                        <div className="trophy-icon">🏆</div>
+                        <div className="trophy-icon"><FaTrophy /></div>
                         <div className="badge">Guinness World Record</div>
                         <h3>Organized Google Agentic AI Day</h3>
                         <p className="featured-description">
@@ -163,7 +164,7 @@ function Achievements() {
                             <h3>{achievement.title}</h3>
 
                             {achievement.platform && (
-                                <p className="platform">📍 {achievement.platform}</p>
+                                <p className="platform"><FaMapMarkerAlt /> {achievement.platform}</p>
                             )}
 
                             {achievement.institution && (
@@ -171,7 +172,7 @@ function Achievements() {
                             )}
 
                             {achievement.period && (
-                                <p className="period">📅 {achievement.period}</p>
+                                <p className="period"><FaCalendarAlt /> {achievement.period}</p>
                             )}
 
                             {achievement.score && (
