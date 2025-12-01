@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { FaCode, FaDatabase, FaCloud, FaChartBar, FaChartLine } from 'react-icons/fa';
 import './Skills.css';
 
 function Skills() {
@@ -39,7 +40,7 @@ function Skills() {
 
     const skills = [
         {
-            icon: '💻',
+            icon: FaCode,
             title: 'Languages',
             tags: ['Python', 'SQL', 'C++', 'JavaScript'],
             percentage: 95,
@@ -47,7 +48,7 @@ function Skills() {
             gradientColors: ['#667eea', '#764ba2']
         },
         {
-            icon: '🗄️',
+            icon: FaDatabase,
             title: 'Databases',
             tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'ETL', 'Data Warehousing'],
             percentage: 90,
@@ -55,7 +56,7 @@ function Skills() {
             gradientColors: ['#4facfe', '#00f2fe']
         },
         {
-            icon: '☁️',
+            icon: FaCloud,
             title: 'Cloud & Tools',
             tags: ['AWS RDS', 'EC2', 'Lambda', 'Selenium', 'API Integration'],
             percentage: 85,
@@ -63,7 +64,7 @@ function Skills() {
             gradientColors: ['#f093fb', '#f5576c']
         },
         {
-            icon: '📊',
+            icon: FaChartBar,
             title: 'Visualization',
             tags: ['Power BI', 'Tableau', 'Looker Studio'],
             percentage: 92,
@@ -71,7 +72,7 @@ function Skills() {
             gradientColors: ['#667eea', '#00f2fe']
         },
         {
-            icon: '📈',
+            icon: FaChartLine,
             title: 'Analytics',
             tags: ['Statistical Analysis', 'Machine Learning', 'Predictive Modeling', 'A/B Testing', 'Time-series'],
             percentage: 88,
@@ -94,7 +95,9 @@ function Skills() {
                             className="skill-card glass-card"
                             ref={el => skillCardsRef.current[index] = el}
                         >
-                            <div className="skill-icon">{skill.icon}</div>
+                            <div className="skill-icon">
+                                {React.createElement(skill.icon)}
+                            </div>
                             <h3>{skill.title}</h3>
                             <div className="skill-tags">
                                 {skill.tags.map((tag, tagIndex) => (

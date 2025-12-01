@@ -14,10 +14,10 @@
 
 .filter-btn {
     padding: var(--spacing-xs) var(--spacing-md);
-    background: var(--glass-bg);
-    border: 2px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 25px;
-    color: var(--text-secondary);
+    color: #d1d9e6;
     font-size: var(--font-size-md);
     font-weight: 600;
     cursor: pointer;
@@ -146,15 +146,13 @@
 .project-content h3 {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-sm);
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7ab8f0;
+    font-weight: 700;
     line-height: 1.3;
 }
 
 .project-description {
-    color: var(--text-secondary);
+    color: #d1d9e6;
     font-size: var(--font-size-sm);
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
@@ -170,11 +168,11 @@
 
 .tech-badge {
     padding: 4px 10px;
-    background: rgba(102, 126, 234, 0.1);
-    border: 1px solid rgba(102, 126, 234, 0.3);
+    background: rgba(102, 126, 234, 0.18);
+    border: 1px solid rgba(102, 126, 234, 0.5);
     border-radius: 12px;
     font-size: 0.75rem;
-    color: var(--accent-blue);
+    color: #7ab8f0;
     transition: all var(--transition-fast);
 }
 
@@ -230,10 +228,8 @@
 .back-content h3 {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-sm);
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7ab8f0;
+    font-weight: 700;
     line-height: 1.3;
 }
 
@@ -244,8 +240,9 @@
 
 .highlights h4 {
     font-size: var(--font-size-md);
-    color: var(--accent-blue);
+    color: #7ab8f0;
     margin-bottom: var(--spacing-xs);
+    font-weight: 700;
 }
 
 .highlights ul {
@@ -257,7 +254,7 @@
     position: relative;
     padding-left: var(--spacing-md);
     margin-bottom: var(--spacing-xs);
-    color: var(--text-secondary);
+    color: #d1d9e6;
     font-size: var(--font-size-sm);
     line-height: 1.5;
 }

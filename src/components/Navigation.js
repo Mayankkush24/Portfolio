@@ -83,6 +83,15 @@ function Navigation() {
                     </li>
                     <li>
                         <a
+                            href="#achievements"
+                            className={`nav-link ${activeSection === 'achievements' ? 'active' : ''}`}
+                            onClick={(e) => handleNavClick(e, '#achievements')}
+                        >
+                            Achievements
+                        </a>
+                    </li>
+                    <li>
+                        <a
                             href="#projects"
                             className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
                             onClick={(e) => handleNavClick(e, '#projects')}
@@ -97,15 +106,6 @@ function Navigation() {
                             onClick={(e) => handleNavClick(e, '#data-demo')}
                         >
                             Data Demo
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#achievements"
-                            className={`nav-link ${activeSection === 'achievements' ? 'active' : ''}`}
-                            onClick={(e) => handleNavClick(e, '#achievements')}
-                        >
-                            Achievements
                         </a>
                     </li>
                     <li>
