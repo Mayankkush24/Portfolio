@@ -2,6 +2,10 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, var(--dark-bg) 0%, #0f1221 50%, var(--dark-bg) 100%);
+    padding-top: 160px;
+    padding-bottom: var(--spacing-xl);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
 }
 
 #particlesCanvas {
